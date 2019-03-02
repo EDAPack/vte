@@ -1,0 +1,16 @@
+*** vte.orig	2019-03-02 15:51:14.070994366 -0800
+--- vte	2019-03-02 15:51:55.715995174 -0800
+***************
+*** 19,24 ****
+--- 19,29 ----
+  fi
+  
+  vte_dir=$(dirname ${script_dir})
++ 
++ EDAPACK=$(dirname $(dirname $(vte_dir)))
++ 
++ export PATH=$EDAPACK/python3/bin:$PATH
++ 
+  # Need to adjust PYTHONPATH to find dependencies
+  export PYTHONPATH=${vte_dir}/lib:$PYTHONPATH
+  
